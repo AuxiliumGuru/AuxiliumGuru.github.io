@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Game</title>
+    <link rel="stylesheet" href="trivia_style.css">
+    <link rel="icon" type="image/gif" href="trivia.png">
+</head>
+<body>
+    
+    <div id="container">
+        <!-- Loader -->
+
+        <div style="display: none" class="loader-section">
+            <div id="loader">
+            </div>
+        </div>
+       
+
+        <!-- Filter Form -->
+        <div class="welcoming-box">
+            <div class="select-option">
+                <form id="filter-form">
+                    <h2>Select Category</h2>
+                    <div class="category-section">
+                        <div class="category-option">
+                            <input type="radio" name="category-filter" id="category-1" value="Mythology"><label for="category-1"> Mythology </label>
+                          </div>
+                          <div class="category-option">
+                            <input type="radio" name="category-filter" id="category-2" value="Art"><label for="category-2"> Art </label>
+                          </div>
+                          <div class="category-option">
+                            <input type="radio" name="category-filter" id="category-3" value="GK"><label for="category-3"> General Knowledge </label>
+                          </div>
+                          <div class="category-option">
+                            <input type="radio" name="category-filter" id="category-4" value="History"><label for="category-4"> History </label>
+                          </div>
+                          <div class="category-option">
+                            <input type="radio" name="category-filter" id="category-5" value="ScienceComputer"><label for="category-5"> Computer </label>
+                          </div>
+                    </div>
+                    <h2>Select Difficulty</h2>
+                    <div class="difficulty-section">
+                        <div class="difficulty-option">
+                            <input type="radio" name="difficulty-filter" id="difficulty-easy" value="easy"><label for="difficulty-easy"> Easy </label>
+                        </div>
+                        <div class="difficulty-option">
+                            <input type="radio" name="difficulty-filter" id="difficulty-medium" value="medium"><label for="difficulty-medium"> Medium </label>
+                        </div>
+                        <div class="difficulty-option">
+                            <input type="radio" name="difficulty-filter" id="difficulty-hard" value="hard"><label for="difficulty-hard"> Hard </label>
+                        </div>
+                    </div>
+                    
+                    <div class="button-section">
+                        <button type="submit">Proceed</button>
+                    </div>
+                    
+                </form>
+                </div>
+        </div>
+
+        <!-- Popup-box / for the container card-->
+        <div style="display: none;" id="popup-box">
+            <h2 id="box-title">Popup Title</h2>
+            <p id="box-message">This is the content of the popup box.</p>
+            <button id="box-close-button">Close</button>
+        </div>
+
+        <!-- Container Card / Quiz Content -->
+        <div style="display:none;" class="container-card">
+            <h1>Trivia Quiz</h1>
+            <p class="question"></p>
+            <form id="quiz-form">
+                <div class="answer-option">
+                    <input type="radio" name="answer" id="answer-A"><label for="answer-A" id="choice-A">A. </label>
+                </div>
+                <div class="answer-option">
+                    <input type="radio" name="answer" id="answer-B"><label for="answer-B" id="choice-B">B. </label>
+                </div>
+                <div class="answer-option">
+                    <input type="radio" name="answer" id="answer-C"><label for="answer-C" id="choice-C">C. </label>
+                </div>
+                <div class="answer-option">
+                    <input type="radio" name="answer" id="answer-D"><label for="answer-D" id="choice-D">D. </label>
+                </div>
+                <button type="submit">Submit Answer</button>
+            </form>
+        </div>
+        
+    </div>
+
+    <footer>
+        <p>Trivia Game v1.0.0</p>
+    </footer>
+    <script src="trivia_script.js"></script>
+</body>
+</html>

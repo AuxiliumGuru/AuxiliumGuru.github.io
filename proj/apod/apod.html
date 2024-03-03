@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APOD</title>
+    <link rel="stylesheet" href="apod-style.css">
+    <link rel="icon" type="image/gif" href="apod.png">
+    <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
+</head>
+<body>
+    
+    <div id="container">
+
+        <div class="container-card">
+            <h1>Astronomy Picture of The Day</h1>
+            <button id="generate-img">Generate Picture</button>
+            <div style="display:none;" id="loading-container">
+                <div class="loader"></div>
+            </div>
+
+            <div class="card-details" style="display: none">
+                <a href="" id="anchor" target="_blank"><img id="image" src="" alt="apod picture"></a>
+                <!-- <h2 class="title">Title goes here</h2>
+                
+                <p class="date"></p>
+                <p class="explanation"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos laborum similique ad necessitatibus quisquam quos ratione nihil culpa consequatur, impedit atque delectus eveniet natus sunt possimus iusto ipsa beatae expedita!</p>     -->
+            </div>
+            
+        </div>
+        
+    </div>
+    <script src="apod-script.js"></script>
+    
+</body>
+</html>

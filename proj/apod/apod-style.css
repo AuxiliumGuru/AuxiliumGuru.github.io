@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: hsl(0, 0%, 95%);
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-card {
+    /* background: linear-gradient(180deg, hsl(210, 100%, 75%), hsl(251, 13%, 74%)); */
+    /* background: rgb(195, 195, 253); */
+    padding: 30px 50px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.5);
+    /* min-width: 100px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+
+#generate-img {
+
+    height: 50px;
+    border-radius: 15px;
+    border: 1px solid rgb(107, 231, 107);
+    background: rgb(91, 228, 91);
+    font-size: 18px;
+    /* font-weight: bold; */
+    color:hsl(0, 0%, 100%);
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+    cursor: pointer;
+
+}
+
+#generate-img:hover {
+    background: rgb(54, 199, 54);
+}
+
+.container-card h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    /* color: hsla(0, 0%, 0%, 0.8); */
+    color: hsl(0, 2%, 20%);
+    margin-bottom: 3px;
+}
+
+
+.card-details {
+    max-width: 500px;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    /* background-color: black; */
+}
+
+h2 {
+    font-size: 1.5rem;
+    /* font-weight: bold; */
+    /* color: hsla(0, 0%, 0%, 0.8); */
+    color: hsl(0, 0%, 20%);
+    margin-bottom: 1px;
+}
+
+.explanation {
+    /* padding-right: 500px; */
+    text-align: justify;
+}
+
+.date {
+    /* padding-right: 500px; */
+    text-align: justify;
+    font-style: italic;
+}
+
+.copyright {
+    /* font-size: 5rem; */
+    text-align: center;
+    font-style: italic;
+}
+
+
+.container-card  .card-details img {
+    position: relative;
+    height: 400px;
+    width: auto;
+    /* margin: ; */
+    cursor: pointer;
+}
+
+
+#loading-container {
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 158.08px;
+    border-radius: 15px;
+    margin-top: 10px;
+    border: 1px solid rgb(107, 231, 107);
+    background-color: rgb(91, 228, 91);
+    /* background-color: rgba(0, 0, 0, 0.5); Semi-transparent background */
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* Ensure it appears on top of other content */
+}
+  
+.loader {
+width: 20px;
+height: 20px;
+border: 8px solid #f3f3f3; /* Light gray border */
+border-top: 8px solid #3498db; /* Blue top border */
+border-radius: 50%;
+animation: spin 2s linear infinite;
+}
+
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

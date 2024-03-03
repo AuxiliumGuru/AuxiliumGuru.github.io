@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GWA Calculator</title>
+
+    <link rel="stylesheet" href="gwa-calculator.css">
+    <link rel="icon" type="image/gif" href="calculator.png">
+        
+</head>
+  
+<body>
+    
+    <div id="body">
+        <table id='calc_table'>
+            <!-- Headers -->
+            <th id="header">GWA CALCULATOR</th>
+            <tr>
+                <td>
+                    <label>SUBJECT</label>
+                    <input type="text" id="subjectInput" class="textbox" size="100%" placeholder="Subject Name">
+                    <span class="error-message" id="sub-error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>NUMBER OF UNITS</label>
+                    <input type="text" id="unitInput" class="textbox" size="100%" placeholder="Units">
+                    <span class="error-message" id="units-error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>FINAL GRADE</label>
+                    <input type="text" id="gradeInput" class="textbox" size="100%" placeholder="Grade">
+                    <span class="error-message" id="grade-error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td id="twoBtn">
+                    <button  id="addBtn" class="buttons">Add Subject</button>
+                    <button  id="resetBtn" class="buttons">Reset</button>
+                </td>
+                
+            </tr>
+        </table>
+
+        <table id="info_table">
+            <!-- T Headers -->
+            <th>Subject</th>
+            <th>Units</th>
+            <th>Final Grade</th>
+            <th>Action</th>
+
+            <!-- Rows -->
+            <!-- <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+                <td>Cell 3</td>
+                <td>
+                    <button id="delBtn">Delete</button>
+                </td>
+            </tr> -->
+        </table>
+
+
+        <table id="ave_table">
+            <th id="ave_label">Average 0.00%</th>
+            <tr>
+                <td>
+                    <button id="clearBtn" >Clear Table</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+   <script src="script.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABLE PT1</title>
+
+    <style>
+        th {
+            text-align: center;
+            font-weight: bold;
+            /* color: #ececa1; */
+            /* color:#9d92da; */
+            /* color: #95db95; */
+            
+        }
+        .to-center {
+            text-align: center;
+        }
+        #path {
+           
+            padding-top: 15px;
+            padding-bottom: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <table border="1", cellspacing="3" cellpadding="5" >
+        <tbody>
+            <tr>
+                <th rowspan="3"><strong>Day</strong></td>
+                <th colspan="3">Seminar</td>
+            </tr>
+            <tr>
+                <th colspan="2">Schedule</td>
+                <th  rowspan="2">Topic</td>
+            </tr>
+            <tr>
+                <th>Begin</td>
+                <th>End</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Monday</td>
+                <td rowspan="2" class="to-center" bgcolor="#F8F6D1">8:00 a.m</td>
+                <td rowspan="2" class="to-center" bgcolor="#BFB4F8">5:00 a.m</td>
+                <td class="to-center">Introduction ito XML</td>
+            
+            </tr>
+                <td class="to-center">Validity: DTD and Relax NG</td>
+            <tr>
+                <td rowspan="4">Tuesday</td>
+                <td class="to-center" bgcolor="#F8F6D1">8:00 a.m.</td>
+                <td class="to-center" bgcolor="#F8F6D1">11:00 a.m.</td>
+                <td rowspan="2" class="to-center" id="path" ><span style="padding-top:200px; padding-bottom: 20px;">XPath</span></td>
+
+            </tr>
+            <tr>
+                <td rowspan="2" class="to-center" bgcolor="#F8F6D1">11:00 a.m.</td>
+                <td rowspan="2" class="to-center" bgcolor="#C7F8D8">2:00 p.m.</td>
+            </tr>
+            <tr>
+                <td rowspan="2" class="to-center">XSL Transformation</td>
+            </tr>
+            <tr>
+                <td class="to-center" bgcolor="#C7F8D8">2:00 p.m.</td>
+                <td class="to-center" bgcolor="#BFB4F8">5:00 p.m.</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td class="to-center" bgcolor="#F8F6D1">8:00 a.m.</td>
+                <td class="to-center" bgcolor="#C7F8D8">12:00 p.m.</td>
+                <td class="to-center">XSL Formatting Objects</td>
+            </tr>
+        </tbody>
+        
+        
+
+    </table>
+</body>
+</html>

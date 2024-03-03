@@ -1,0 +1,553 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* HOME STYLE */
+
+body {
+    background: rgb(0, 0, 0);
+    color: #fff;
+    scroll-behavior: smooth;
+    /* text-align: center;  */
+    margin: 0 auto; /* Center the container horizontally */
+    /* padding: 20px;  */
+}
+
+#header, #activities, #projects, #contacts {
+    margin-top: 100px;
+}
+
+#header {
+    width: 100%;
+    height: 25%;
+    /* margin-top: 50px; */
+
+}
+
+.logo {
+    margin-top: 5px;
+    width: 60px;
+    height: 60px;
+}
+
+.container {
+    padding: 10px 10%;
+    position: fixed;
+    top: 0; /* Adjust if needed */
+    left: 0; /* Adjust if needed */
+    width: 100%; /* Ensure full width */
+    background: rgb(0, 0, 0);
+    /* border: 1px solid #e932da; */
+    border-radius: 1px;
+    z-index: 999;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+nav ul li{
+    display: inline-block;
+    margin: 10px 20px;
+    list-style: none;
+}
+
+nav ul li a {
+    color:white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    z-index: 999;
+}
+
+/* #home {
+    padding-bottom: 4px;
+    border-bottom: 3px solid #e932da;
+} */
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #cb32e9;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+    z-index: 999;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-text {
+    /* margin-top: 10%; */
+    margin-left: 2%;
+    font-size: 25px;
+    margin-bottom: 3%;
+}
+
+.header-text h1 {
+    font-size: 50px;
+}
+
+.header-text h1 span {
+    color: #d32ee9;
+}
+
+.circle-container {
+    margin-top: 13%;
+    margin-left: 20%;
+    width: 200px;  /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.circle-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Ensures image fills the circle */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header-text, .circle-container{
+    display: inline-block;
+}
+
+
+
+
+/* ACTIVITIES Style */
+
+#activities {
+    /* height: 100%; */
+    height: 25%;
+    margin-top: 130px;
+    padding-top: 2px;
+    padding-bottom: 10px;
+    /* background: white; */
+}
+#activities h1 {
+    display: block;
+    padding-top: 30px;
+    margin-top: 5%;
+    margin-left: 10%;
+    /* margin-bottom: 1%; */
+    font-size: 40px;
+    color: white;
+}
+
+.about-container {
+    margin-top: 20px;
+    margin-left: 11%;
+    height: 400px;
+    width: 80%;
+    /* border: 10px solid aqua; */
+    /* padding-top: %; */
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    /* margin-bottom: ; */
+    gap: 20px;
+}
+
+.about-container img {
+    height: 450px;
+    width: 350px;
+    border-radius: 10px;
+}
+
+.about-container .info-section {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+.about-container p {
+    text-align: justify; 
+    font-size: 18px;
+}
+
+.about-container .info-section-skills {
+    margin-top: 30px;
+}
+
+.info-section-skills p{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.prog-lang-section {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.prog-lang-section ul {
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+#projects {
+    height: 25%;
+    margin-top: 100px;
+    padding: 10px;
+    position: relative; /*Needed for absolute positioning*/
+  }
+  
+  #projects h1 {
+    display: block;
+    padding-top: 30px;
+    margin-top: 5%;
+    margin-left: 10%;
+    font-size: 40px;
+    color: white;
+  }
+  
+.proj-slider {
+    display: flex;
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    width: 100%; /* Ensure full width */
+    /* overflow: hidden; */
+  }
+  
+.proj-container {
+    display: flex;
+    justify-content: space-between; /* Distribute cards evenly */
+    width: calc(330px * 3 + 60px); /* Accommodate 3 cards + margins */
+  }
+  
+.proj-card {
+    background: rgb(211, 205, 247);
+    width: 330px;
+    height: 380px;
+    margin: 10px;
+    border-radius: 10px;
+    padding-top: 15px;
+    flex-shrink: 0; /* Prevent cards from shrinking below width */
+  }
+  
+.prev-btn,
+.next-btn {
+    position: absolute; /* Position buttons inside the slider */
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+    z-index: 1; /* Ensure buttons are clickable over cards */
+    padding: 10px;
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+.prev-btn {
+    left: 0;
+  }
+  
+.next-btn {
+    right: 0;
+  }
+  
+  .weather-image,
+  .calculator-image {
+    background-size: cover;
+    height: 270px;
+    width: 270px;
+    margin-left: 32px;
+  }
+  
+  .proj-container a {
+    font-size: 23px;
+    margin-top: 3%;
+    color: rgb(48, 44, 44);
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .proj-card h2 {
+    padding-top: 14px;
+  }
+  
+  .proj-card h2 span {
+    padding: 8px 30px;
+  }
+  
+
+
+.proj-card {
+    /* background: rgb(255, 255, 255); */
+    background: rgb(211, 205, 247);
+    width: 330px;
+    height: 380px;
+    margin: 20px;
+    border-radius: 10px;
+    padding-top: 15px;
+    /* opacity: 0.3; */
+    /* border: 1px solid rgb(172, 159, 243); */
+}
+
+.proj-card:hover {
+    background-color: rgb(119, 72, 248);
+    color: rgb(255, 255, 255);
+}
+
+.weather-image {
+    background-image: url("../img/weather.png");
+    background-size: cover;
+    margin-left: 32px;
+    height: 270px;
+    width: 270px;
+
+}
+
+.calculator-image {
+    background-image: url("../img/calculator.png");
+    background-size: cover;
+    /* margin-top: 30px; */
+    padding-top: 50px;
+    margin-left: 32px;
+    height: 270px;
+    width: 270px;
+    /* opacity: 0.8; */
+}
+
+.apod-image {
+    background-image: url("../img/apod-logo.webp");
+    background-size: cover;
+    border-radius: 40%;
+    margin-left: 32px;
+    height: 270px;
+    width: 270px;
+
+}
+
+.trivia-image {
+    background-image: url("../img/trivia.png");
+    background-size: cover;
+    margin-left: 32px;
+    height: 270px;
+    width: 270px;
+
+}
+
+.proj-container a {
+    font-size: 23px;
+    margin-top: 3%;
+    /* margin-left: 22%; */
+    color: rgb(48, 44, 44);
+    text-align: center;
+    text-decoration: none;
+}
+
+.proj-card h2 {
+    /* margin-top: 2px; */
+    padding-top: 14px;
+} 
+
+.proj-card h2 span {
+    /* border: 1px solid pink; */
+    /* background: rgb(107, 48, 216); */
+    /* opacity: 0.6; */
+    padding: 8px 30px;
+    /* border-radius: 15px; */
+}
+
+/* 
+.calculator-image:hover {
+    opacity: 1;
+}
+
+.weather-image:hover {
+    opacity: 1;
+} */
+
+
+#contacts {
+    margin-top: 5%;
+    background: rgb(243, 243, 243);
+    height: 20%;
+    /* width: 100; */
+    /* margin: 10px; */
+}
+
+.contacts-container {
+    display: flex;
+    justify-content: right;
+    align-items: top;
+    margin-left: 200px;
+    width: 90%;
+}
+
+.contacts-info h1 {
+    color: black;
+    padding-top: 140px;
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+
+.contacts-info p {
+    color: black;
+    margin-left: 2px;
+    line-height: 20px;
+    
+}
+
+.socials-section {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.socials-section img {
+    height: 35px;
+    width: 35px;
+}
+
+.card-contacts-form {
+    background: rgb(243, 243, 243);
+    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.5);
+    width: 380px;
+    height: 360px;
+    margin: 100px;
+    border-radius: 10px;
+    margin-right: 200px;
+
+}
+
+.card-contacts-form form {
+    padding: 30px 20px;
+    /* margin: 0 %; */
+}
+.card-contacts-form form input {
+    height: 40px;
+    border: 1px solid rgb(216, 211, 211);
+    border-radius: 6px;
+    margin: 10px 0;
+    background: rgb(230, 227, 227);
+}
+
+.card-contacts-form form textarea {
+    /* margin-top: 5px; */
+    height: 70px;
+    border: 1px solid rgb(216, 211, 211);
+    border-radius: 6px;
+    margin: 10px 0;
+    background: rgb(230, 227, 227);
+}
+
+
+.card-contacts-form form .last-name {
+    padding-left: 100px;
+}
+
+.card-contacts-form form .first-name {
+    padding-left: 5px;
+}
+
+.card-contacts-form form label {
+    color: black;
+    font-size: 15px;
+}
+
+.card-contacts-form form .fName, .lName {
+    width: 48%;
+}
+
+.card-contacts-form form .email, .message{
+    width: 97.5%;
+}
+
+.card-contacts-form form button {
+    margin-top: 4px;
+    height: 35px;
+    width: 100px;
+    border-radius: 6px;
+    border: 1px solid rgb(216, 211, 211);
+    background: #bd3ddd;
+    color: white;
+    font-size: 15px;
+}
+
+
+footer {
+    /* height: 5%; */
+    background-color: #bd3ddd;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+
+/* Animations */
+
+a[href="#header"] {
+    animation: scrollHeader 0.5s ease-in-out;
+  }
+  
+  @keyframes scrollHeader {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(0); /* No translation for the header section */
+    }
+  }
+  
+#activities a[href^="#activities"] {
+    animation: scrollActivities 0.5s ease-in-out;
+  }
+  
+  @keyframes scrollActivities {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-100vh); /* Adjust for Activities section */
+    }
+  }
+
+#projects a[href^="#projects"] {
+animation: scrollProjects 0.5s ease-in-out;
+}
+
+@keyframes scrollProjects {
+0% {
+    transform: translateY(0);
+}
+100% {
+    transform: translateY(-100vh); /* Adjust for Activities section */
+}
+}
+
+#contacts a[href^="#contacts"] {
+    animation: scrollContacts 0.5s ease-in-out;
+  }
+  
+  @keyframes scrollContacts {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-100vh); /* Adjust for Activities section */
+    }
+  }
+
+
+
+
+
